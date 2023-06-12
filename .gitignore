@@ -1,3 +1,5 @@
 /.vscode
 /db.sqlite3
 /run.bat
+/media/images/upload/*.webp
+/media/images/user/*.webp
