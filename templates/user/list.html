@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>ユーザリスト</title>
+{% endblock head %}
+{% block main %}
+<div class="p-5 shadow rounded">
+    <ul class="list-group list-group-flush">
+        {% for user in users %}
+        <li class="list-group-item">
+            <img src="/media/{{user.trim_image}}" width="100px"></img>
+            <a href="{% url 'profile' user.upload_by.username %}">{{ user.upload_by.username }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock main %}
