@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% block head %}
+<title>ログイン</title>
+{% endblock head %}
+{% block main %}
+<form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <button type="submit" class="btn btn-primary">ログイン</button>
+</form>
+
+<a href="{% url 'signup' %}">登録はこちら</a>
+
+{% endblock main %}
